@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background: url(./img/background.jpg);background-size:100% 100% ; background-attachment: fixed">
 
 <head>
   <meta charset="UTF-8">
@@ -8,7 +8,7 @@
   <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/jquery.json-viewer.js"></script>
   <link href="css/index.css" rel="stylesheet" media="all">
-  <title>Result</title>
+  <title>1310831049 Final exam</title>
   <style>
     body {
       padding: 0 1rem;
@@ -24,6 +24,8 @@
       width: 45%;
       border-radius: 15px;
       min-height: 80vh;
+      background: url(./img/blank.png);
+
     }
 
     #image {
@@ -35,23 +37,27 @@
     }
 
     #result {
-      width: 100%;
-      border: 1px solid gray;
-      border-radius: 5px;
+      background: url(./img/blank.png);
+      background-size: 100% 100%;
+      background-attachment: fixed;
+      opacity: .7;
+    }
 
+    body {
+      background: transparent;
     }
   </style>
 </head>
 
 <body>
-  <h2>Result:</h2>
-  <div class="content">
-    <div>
-      <div id="result">
-        <pre id="json-renderer"></pre>
+  <h1>Text Result:</h2>
+    <div class="content">
+      <div>
+        <div id="result">
+          <pre id="json-renderer"></pre>
+        </div>
       </div>
     </div>
-  </div>
 </body>
 <script>
   const res = JSON.parse(window.localStorage.getItem('result'))
